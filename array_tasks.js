@@ -28,13 +28,20 @@ var arrayTasks = {
 		return total		
 	},
 
-	// findDuplicates: function (arr) {
-		
-	// },
+	findDuplicates: function (arr) {
+		var duplicatesArray = []
+		for (var i = 0; i < arr.length; i++) {
+			var currentElement = arr[i]
+			if (currentElement === arr[i+1]) {
+				duplicatesArray.push(currentElement)
+			}
+		}
+		return duplicatesArray
+	},
 
-	// removeAndClone: function (arr, valueToRemove) {
+	removeAndClone: function (arr, valueToRemove) {
 		
-	// },
+	},
 
 	// findIndexesOf: function (arr, itemToFind) {
 		
