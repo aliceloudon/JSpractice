@@ -40,7 +40,13 @@ var arrayTasks = {
 	},
 
 	removeAndClone: function (arr, valueToRemove) {
-		
+		var newArray = []
+		arr.forEach(function(element) {
+			if (element != valueToRemove) {
+				newArray.push(element)	
+			}
+		})
+		return newArray
 	},
 
 	// findIndexesOf: function (arr, itemToFind) {
