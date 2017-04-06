@@ -38,6 +38,7 @@ var arrayTasks = {
 			}
 			// This works but returns [4, 5, 5]. I want [4, 5]
 		}
+		duplicatesArray.slice().sort()
 		for (var i = 0; i < duplicatesArray.length; i++) {
 			if (duplicatesArray[i] === duplicatesArray[i+1]) {
 				duplicatesArray.splice(duplicatesArray.indexOf([i+1]), 1)
