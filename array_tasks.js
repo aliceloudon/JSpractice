@@ -58,15 +58,24 @@ var arrayTasks = {
 	},
 
 	findIndexesOf: function (arr, itemToFind) {
-		var newArray = []
+		var indexes = []
 
-		arr.forEach(function (element) {
-			if (element === itemToFind) {
-				var position = arr.indexOf(element) 
-				newArray.push(position)
+		// arr.forEach(function (element) {
+		// 	if (element === itemToFind) {
+		// 		indexes.push(element)
+		// 	}
+		// })
+		// return indexes
+		// -------------------------------------------------- WHY DOESN'T THIS WORK...
+
+		for (var i = 0; i < arr.length; i++) {
+			if (arr[i] === itemToFind) {
+				indexes.push(i)
 			}
-		})
-		return newArray
+		}
+		// console.log(indexes)
+		return indexes
+		// -------------------------------------------------- BUT THIS DOES?
 	},
 
 	// sumOfAllEvenNumbersSquared: function (arr) {
