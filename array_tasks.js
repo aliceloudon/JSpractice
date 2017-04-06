@@ -30,10 +30,17 @@ var arrayTasks = {
 
 	findDuplicates: function (arr) {
 		var duplicatesArray = []
+		arr.slice().sort()
 		for (var i = 0; i < arr.length; i++) {
 			var currentElement = arr[i]
 			if (currentElement === arr[i+1]) {
 				duplicatesArray.push(currentElement)
+			}
+			// This works but returns [4, 5, 5]. I want [4, 5]
+		}
+		for (var i = 0; i < duplicatesArray.length; i++) {
+			if (duplicatesArray[i] === duplicatesArray[i+1]) {
+				duplicatesArray.splice(duplicatesArray.indexOf([i+1]), 1)
 			}
 		}
 		return duplicatesArray
@@ -49,9 +56,17 @@ var arrayTasks = {
 		return newArray
 	},
 
-	// findIndexesOf: function (arr, itemToFind) {
-		
-	// },
+	findIndexesOf: function (arr, itemToFind) {
+		var newArray = []
+
+		arr.forEach(function (element) {
+			if (element === itemToFind) {
+				var position = arr.indexOf(element) 
+				newArray.push(position)
+			}
+		})
+		return newArray
+	},
 
 	// sumOfAllEvenNumbersSquared: function (arr) {
 		
